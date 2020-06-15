@@ -52,6 +52,7 @@
     <header class="bg-dark text-white">
       <div class="container text-center">
         <h1>Voice Separation with an Unknown Number of Multiple Speakers</h1>
+        <p style="color:red;font-size:18px;">Publish as conference paper at "International Conference on Machine Learning" - ICML 2020</p>
         <p class="lead"><a href="mailto:enk100@gmail.com" target="_top">Eliya Nachmani</a>, <a
             href="mailto:yossiadidrum@gmail.com" target="_top">Yossi Adi</a>, <a href="mailto:liorwolf@gmail.com" target="_top">Lior Wolf</a></p>
         <small>Facebook AI Research, Tel-Aviv University</small>
@@ -78,62 +79,77 @@
               </p><p class="lead" align="justify">
               </p><p class="lead" align="justify">
               <b>
-                Link to txt files for 4-5 speaker dataset - <a href="https://github.com/enk100/speaker_separation/raw/master/txt_files_multi_speakers.zip"> download here</a>
+                Link to txt files for 4-5 speaker dataset - <a href="https://github.com/enk100/speaker_separation/raw/master/txt_files_multi_speakers.zip"> Download here</a>
               </b>
               </p><p class="lead" align="justify">
               <b>
-                Link to 2-3 speaker dataset <sup>[1]</sup> - <a href="https://www.merl.com/demos/deep-clustering/create-speaker-mixtures.zip"> download from MERL website</a>
+                Link to 2-3 speaker dataset <sup>[1]</sup> - <a href="https://www.merl.com/demos/deep-clustering/create-speaker-mixtures.zip"> Download from MERL website</a>
               </b>
 
 
 
-            <!--<br><img src="arch.png" alt="Italian Trulli" width="750px">-->
-            <!--<br>-->
-            <!--<br><img src="mul_concat.png" alt="Italian Trulli" width="750px">-->
-            <!--<br>-->
 
-              <!--<div class=”gallery”>-->
-              <!--<figure class="gallery__item gallery__item&#45;&#45;1">-->
-              <!--<center>-->
-                <!--<img src="arch.png" class="gallery__img" alt="Image 1"  width="250px">-->
-              <!--</center>-->
-              <!--</figure>-->
-              <!--<figure class="gallery__item gallery__item&#45;&#45;2">-->
-              <!--<center>-->
-                <!--<img src="mul_concat.png" class="gallery__img" alt="Image 2"  width="250px">-->
-              <!--</center>-->
-              <!--</figure>-->
-              <!--<figure class="gallery__item gallery__item&#45;&#45;3">-->
-                <!--<img src="results_table_2.png" class="gallery__img" alt="Image 3"  width="250px">-->
-              <!--</figure>-->
-            <!--</div>-->
+    </section>
+
     <br>  </br>
             <div class="container">
               <div class="row">
                 <div class="col-md-8">
 
                     <h3>Architecture</h3>
-
                     <img src="src/arch.png" alt="Italian Trulli" width="750px">
                     <br>  </br>
                     <img src="src/mul_concat.png" alt="Italian Trulli" width="750px">
+                    <!-- <br>  </br>
+                    <br>  </br> -->
+                    <!-- <h3>Loss Terms</h3>
+                    <img src="src/vgg_loss.png" alt="Italian Trulli" width="450px"> -->
                 </div>
-                <div class="col-md-4">
-                    <h3>Results</h3>
-                    <img src="src/results_table_2.png" alt="Italian Trulli" width="400px">
-                </div>
+              </div>
+
+              <br>  </br>
+              <br>  </br>
+
+              <div class="row">
+
+                  <h3>Loss Terms</h3>
+                  <img src="src/vgg_loss.png" alt="Italian Trulli" width="450px">
 
               </div>
+
             </div>
 
         </div>
       </div>
     </section>
 
+
+
+        <br>  </br>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h3>Results - WSJ0-2mix</h3>
+                      <img src="src/results_table_2.png" alt="Italian Trulli" width="400px">
+                    </div>
+                    <div class="col-md-4">
+                        <h3>WHAM! & WHAMR!</h3>
+                        <img src="src/results_wham.png" alt="Italian Trulli" width="400px">
+                    </div>
+
+                  </div>
+                </div>
+
+            </div>
+          </div>
+        </section>
+
     <section id="samples" class="bg-light">
       <div class="container">
         <div class="row">
           <div class="col-lg-13 mx-auto">
+
+
             <p class="lead" align="justify">
                 <!--Here are some samples from our model for you to listen. "Mixture input" refers to the original mixed audio.-->
                 <!--Conv-TasNet<sup>[1]</sup> refers to the method "Conv-TasNet: Surpassing Ideal Time–Frequency-->
@@ -160,8 +176,173 @@
 
               <br>  </br>
 
+
+              <center>
+              <h3>WHAM! Dataset Samples</h3>
+              <p></p>
+              <p></p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Mixture input</th>
+                    <th>Ground Truth</th>
+                    <th>Ours</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-top:1px solid black">
+                    <td rowspan="2"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/22go010m_0.3947_421o0310_-0.3947.wav"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/22go010m_0.3947_421o0310_-0.3947_s1_gt.wav"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/22go010m_0.3947_421o0310_-0.3947_s1.wav"
+                          type="audio/wav"></audio></td>
+                    <!-- <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/"
+                          type="audio/wav"></audio></td> -->
+                  </tr>
+                  <tr>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/22go010m_0.3947_421o0310_-0.3947_s2_gt.wav"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/22go010m_0.3947_421o0310_-0.3947_s2.wav"
+                          type="audio/wav"></audio></td>
+                    <!-- <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/"
+                          type="audio/wav"></audio></td> -->
+                    <!-- <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/"
+                          type="audio/wav"></audio></td> -->
+                  </tr>
+                  <tr style="border-top:1px solid black">
+                    <td rowspan="2"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/mix.wav"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/gt_ex1.wav"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/pred1.wav"
+                          type="audio/wav"></audio></td>
+                    <!-- <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/"
+                          type="audio/wav"></audio></td> -->
+                  </tr>
+                  <tr>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/gt_ex2.wav"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/pred2.wav"
+                          type="audio/wav"></audio></td>
+                    <!-- <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/"
+                          type="audio/wav"></audio></td> -->
+                    <!-- <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/wham/"
+                          type="audio/wav"></audio></td> -->
+                  </tr>
+                </tbody>
+              </table>
+
+              <br>  </br>
+
+
+              <center>
+              <h3>WHAMR! Dataset Samples</h3>
+              <p></p>
+              <p></p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Mixture input</th>
+                    <th>Ground Truth</th>
+                    <th>Ours</th>
+                    <!-- <th>DPRNN</th>
+                    <th>Conv-TasNet</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-top:1px solid black">
+                    <td rowspan="2"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/053a050c_0.76629_440c0205_-0.76629.wav"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/053a050c_0.76629_440c0205_-0.76629_gt1.wav"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/053a050c_0.76629_440c0205_-0.76629_s1.wav"
+                          type="audio/wav"></audio></td>
+                    <!-- <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/"
+                          type="audio/wav"></audio></td> -->
+                  </tr>
+                  <tr>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/053a050c_0.76629_440c0205_-0.76629_gt2.wav"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/053a050c_0.76629_440c0205_-0.76629_s2.wav"
+                          type="audio/wav"></audio></td>
+                    <!-- <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/"
+                          type="audio/wav"></audio></td> -->
+                  </tr>
+                  <tr style="border-top:1px solid black">
+                    <td rowspan="2"><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/053a050b_0.016911_443o030x_-0.016911.wav"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/053a050b_0.016911_443o030x_-0.016911_gt1.wav"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/053a050b_0.016911_443o030x_-0.016911_s1.wav"
+                          type="audio/wav"></audio></td>
+                    <!-- <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/"
+                          type="audio/wav"></audio></td> -->
+                  </tr>
+                  <tr>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/053a050b_0.016911_443o030x_-0.016911_gt2.wav"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/053a050b_0.016911_443o030x_-0.016911_s2.wav"
+                          type="audio/wav"></audio></td>
+                    <!-- <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/"
+                          type="audio/wav"></audio></td>
+                    <td><audio controls class="audio-player" preload="metadata" style="width: 180px;">
+                        <source src="src/samples/whamr/"
+                          type="audio/wav"></audio></td> -->
+                  </tr>
+                </tbody>
+              </table>
+
+              <br>  </br>
+
+
             <center>
-            <h3>WSJ-2mix DB Samples</h3>
+            <h3>WSJ-2mix Dataset Samples</h3>
             <p></p>
             <p></p>
             <table>
@@ -245,7 +426,7 @@
               <br>  </br>
 
 
-            <h3>WSJ-3mix DB Samples</h3>
+            <h3>WSJ-3mix Dataset Samples</h3>
             <p></p>
             <p></p>
             <table>
@@ -355,7 +536,7 @@
               <br>  </br>
 
 
-            <h3>WSJ-4mix DB Samples</h3>
+            <h3>WSJ-4mix Dataset Samples</h3>
             <p></p>
             <p></p>
             <table>
@@ -493,7 +674,7 @@
               <br>  </br>
 
 
-            <h3>WSJ-5mix DB Samples</h3>
+            <h3>WSJ-5mix Dataset Samples</h3>
             <p></p>
             <p></p>
             <table>
